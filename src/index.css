@@ -1,0 +1,162 @@
+/* Variables */
+:root {
+  --nav-height-full: 40px;
+  --nav-height-small: 10px;
+}
+
+/* Global */
+
+* {
+  font-family: Avenir, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+/* Loaders */
+
+#loader-span {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  position: relative;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #667eea;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: animloader 2s linear infinite;
+}
+.loader::after {
+  animation-delay: 1s;
+}
+
+@keyframes animloader {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* Chats Page */
+
+.chats-page {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.nav-bar{
+  transition: 0.3s;
+  width: 100%;
+  height: var(--nav-height-small);
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.nav-bar:hover{
+  cursor: pointer;
+  height: var(--nav-height-full);
+  transition: 0.3s ease-in-out;
+}
+
+.logo-tab {
+  position: absolute;
+  left: 22px;
+  top: 7px;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.logout-tab {
+  position: absolute;
+  top: 8px;
+  right: 22px;
+  cursor: pointer;
+  padding: 2px;
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+/* Login Page */
+
+#login-page {
+  background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+#login-card {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  padding-top: 36px;
+  padding-bottom: 66px;
+  width: 350px;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+
+  -webkit-box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.57);
+  -moz-box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.57);
+  box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.57);
+
+}
+
+
+.login-button {
+  cursor: pointer;
+  color: white;
+  padding: 12px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.google {
+  background-color: #4285f4;
+  color: white;
+}
+
+#loading-container {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: rgb(255, 255, 255, 0.22);
+}
+
+#loading-icon {
+  font-size: 66px;
+  position: relative;
+  left: calc(50vw - 33px);
+  top: calc(50vh - 22px);
+}
