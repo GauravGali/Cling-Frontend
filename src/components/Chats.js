@@ -82,7 +82,7 @@ const Chats = () => {
             onMouseEnter={() => setNavHeight(40)}
             onMouseLeave={() => setNavHeight(10)}
             >
-                <div className="logo-tab">CLING</div>
+                <div className="logo-tab" onClick={() => window.location.reload(true)}>CLING</div>
                 <div onClick={handleLogout} className="logout-tab">
                     Logout
                 </div>
