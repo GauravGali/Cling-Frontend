@@ -34,7 +34,7 @@ const Chats = () => {
 
     axios
       .post(
-        "http://localhost:8000/users/create",
+        "https://cling-backend.vercel.app/users/create",
         {
           email: user.email,
           avatarUrl: user.photoURL,
